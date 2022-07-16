@@ -2,7 +2,7 @@ import React from 'react'
 
 export const GraceShopper = (props) => {
 return (
- <div>{`This is your GraceShopper Component`} </div>
+ <div className="box">{`This is your GraceShopper Component`} </div>
     )
 }
  

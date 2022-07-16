@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = (props) => {
 return (
- <div>{`This is your Header Component`} </div>
+ <div className="box">{`This is your Header Component`} </div>
     )
 }
 

@@ -1,0 +1,14 @@
+* {
+    display: flex;
+}
+
+.box{
+    border: solid black 2px;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+}
+
+#project-pane {
+    flex-direction: row;
+}
