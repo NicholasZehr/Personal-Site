@@ -1,14 +1,27 @@
 * {
     display: flex;
 }
-
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 .box{
     border: solid black 2px;
     flex-direction: column;
     padding: 5px;
     margin: 5px;
+    width: 100%;
 }
-
+#root {
+    width: 100%
+}
 #project-pane {
     flex-direction: row;
+}
+
+#app{
+    flex-direction: column;
+    width: 100%;
+
 }
