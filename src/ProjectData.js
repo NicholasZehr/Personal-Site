@@ -1,4 +1,4 @@
-const projectData = [
+export const projectData = [
     {
         name: "Grace Shopper",
         description: "Fullstack Academy's exercise full stack application comprehension and understanding.",
@@ -24,6 +24,7 @@ const projectData = [
         //projectLength is in working days
         projectLength: 0,
         deployedURL: "",
-        githubURL:""
+        githubURL: ""
     }
 ]
+
