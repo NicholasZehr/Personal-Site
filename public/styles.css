@@ -2,31 +2,43 @@
     display: flex;
 }
 body {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
 .box{
     border: solid black 2px;
     flex-direction: column;
-    padding: 5px;
-    margin: 5px;
-    width: 100%;
+    width: 100vw;
 }
-#root {
-    width: 100%
-}
-#project-pane {
+
+.project-pane {
     flex-direction: row;
+}
+.slides {
+    width: 100vw;
+    overflow: hidden;
+    display: contents;
 }
 
 #app{
     flex-direction: column;
-    width: 100%;
-
+    width: 100vw;
+}
+.behind {
+    
+    z-index: -1;
+}
+.active {
+    z-index: 1;
+    width: 200%;
 }
 
+
 img {
-    max-width: 300px;
-    max-height: 150px;
+    border-radius: 8px;
+    max-height: max-content;
+    max-width: max-content;
+    height: auto;
+    width: 100%;
 }
