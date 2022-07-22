@@ -15,25 +15,27 @@ body {
 .project-pane {
     flex-direction: row;
 }
-.slides {
+.presented-slides {
     width: 100vw;
     overflow: hidden;
     display: contents;
 }
-
+.presented-slides {
+    overflow: hidden;
+}
 #app{
     flex-direction: column;
     width: 100vw;
 }
 .behind {
-    
     z-index: -1;
+    overflow-wrap: normal;
 }
 .active {
     z-index: 1;
     width: 200%;
+    overflow: visible;
 }
-
 
 img {
     border-radius: 8px;

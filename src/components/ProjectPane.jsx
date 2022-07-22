@@ -15,10 +15,10 @@ export const ProjectPane = () => {
             }
         }
         else {
-            if (activeSlide === 0) {
-                setActiveSlide(projects.length - 1);
+            if (slide === 0) {
+                setter(projects.length - 1);
             } else {
-                setActiveSlide(activeSlide - 1);
+                setter(slide - 1);
             }
         }
     }
@@ -36,13 +36,13 @@ export const ProjectPane = () => {
   return (
     <div className="box project-pane">
       {`This is your ProjectPane Component`}
-      <button onClick={forwardClick}>Next</button>
-      <div className="slides">
+      <button onClick={reverseClick}>Previous</button>
+      <div className="presented-slides">
         <Slide project={projects[leftSlide]} left={true} />
         <Slide project={projects[activeSlide]} active={true} />
         <Slide project={projects[rightSlide]} right={true} />
       </div>
-      <button onClick={reverseClick}>Previous</button>
+      <button onClick={forwardClick}>Next</button>
     </div>
   );
 };
