@@ -22,7 +22,7 @@ const Slide = (props) => {
     }
 
 return (
-    <div className={`box ${findPosition()}`} >{`This is your Slide Component`} 
+    <div className={`slide box ${findPosition()}`} >{`This is your Slide Component`} 
         <div>{name}</div>
         <div>{description}</div>
         <img src={photoURL} alt="Project" title="source: imgur.com" />
