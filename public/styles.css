@@ -25,3 +25,8 @@ body {
     width: 100%;
 
 }
+
+img {
+    max-width: 300px;
+    max-height: 150px;
+}

@@ -6,7 +6,8 @@ export const projectData = [
         //projectLength is in working days
         projectLength: 0,
         deployedURL: "",
-        githubURL:""
+        githubURL: "",
+        photoURL: "https://i.imgur.com/o2e5UFi.png"
     },
     {
         name: "Sytime",
@@ -15,7 +16,8 @@ export const projectData = [
         //projectLength is in working days
         projectLength: 0,
         deployedURL: "",
-        githubURL:""
+        githubURL: "",
+        photoURL: "https://i.imgur.com/o2e5UFi.png"
     },
     {
         name: "Percolate",
@@ -24,7 +26,8 @@ export const projectData = [
         //projectLength is in working days
         projectLength: 0,
         deployedURL: "",
-        githubURL: ""
+        githubURL: "",
+        photoURL: "https://i.imgur.com/FBiv2BE.png"
     }
 ]
 
