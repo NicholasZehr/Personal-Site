@@ -1,5 +1,5 @@
-import React from 'react';
-import {NavBar, AboutMe, ProjectPane} from './components'
+import React from "react";
+import { NavBar, AboutMe, ProjectPane } from "./components";
 function App() {
   return (
     <div id="app">
