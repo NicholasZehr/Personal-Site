@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Slide = (props) => {
     const{project, left, right, active} = props
     const { name, description, photoURL } = project
-    
+    const [transit, setTransit] = useState(false)
+    useEffect(() => {
+        function loadMeUp() {
+            setTimeout(() => {
+                setTransit(true)
+            }, 0)
+        }
+        loadMeUp()
+    },[active])
     const findPosition = () => {
         if (left || right) {
             if (left) {
@@ -22,7 +30,7 @@ const Slide = (props) => {
     }
 
 return (
-    <div className={`slide box ${findPosition()}`} >{`This is your Slide Component`} 
+    <div className={`slide box ${transit ? findPosition() : ''}`} >{`This is your Slide Component`} 
         <div>{name}</div>
         <div>{description}</div>
         <img src={photoURL} alt="Project" title="source: imgur.com" />
