@@ -29,11 +29,14 @@ body {
 }
 .inactive-before {
     display: hidden;
-    width: 50%;
     opacity: 50%;
+}
+.inactive-after .inactive-before {
+    width: 50%
 }
 .inactive-after {
     opacity: 20%;
+    transition-duration: 250ms;
 }
 .active {
     z-index: 1;
@@ -41,13 +44,18 @@ body {
     overflow: visible;
     transition-duration:  500ms;
 }
-.fade-in-image {
-    animation: 150ms ease-in ;
-}
 img {
     border-radius: 8px;
     max-height: max-content;
     max-width: max-content;
     height: auto;
     width: 100%;
+}
+.fade-in-image {
+    animation: fadeIn 1000ms ;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
