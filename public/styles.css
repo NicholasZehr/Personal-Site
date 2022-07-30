@@ -36,13 +36,16 @@ body {
 }
 .inactive-after {
     opacity: 20%;
+    transition: opacity;
     transition-duration: 250ms;
 }
 .active {
     z-index: 1;
     width: 200%;
     overflow: visible;
+    transition: opacity;
     transition-duration:  500ms;
+    background-color: aqua;
 }
 img {
     border-radius: 8px;
@@ -51,11 +54,33 @@ img {
     height: auto;
     width: 100%;
 }
-.fade-in-image {
-    animation: fadeIn 1000ms ;
+.fade-in-image-previous {
+    animation: from-previous 500ms;
+    transition-duration: 250ms;
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+.fade-in-image-next {
+    animation: from-next 500ms ;
+    transition-duration: 250ms;
+}
+
+@keyframes from-previous {
+    0% {
+        filter: brightness(50%);
+        transform: translateX(-50%);
+    }
+    80% {
+        filter: brightness(70%)
+    }
+}
+
+@keyframes from-next {
+    0% {
+        filter: brightness(30%);
+        transform: translateX(50%);
+    }
+    80% {
+        filter: brightness(70%)
+    }
+
 }
