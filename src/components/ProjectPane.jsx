@@ -38,9 +38,9 @@ export const ProjectPane = () => {
       {`This is your ProjectPane Component`}
       <button onClick={reverseClick}>Previous</button>
       <div className="presented-slides">
-        <Slide project={projects[leftSlide]} left={true} />
+        <Slide project={projects[leftSlide]} active={false} />
         <Slide project={projects[activeSlide]} active={true} />
-        <Slide project={projects[rightSlide]} right={true} />
+        <Slide project={projects[rightSlide]} active={false} />
       </div>
       <button onClick={forwardClick}>Next</button>
     </div>

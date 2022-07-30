@@ -27,17 +27,23 @@ body {
     flex-direction: column;
     width: 100vw;
 }
-.behind {
-    z-index: -1;
-    overflow-wrap: normal;
+.inactive-before {
+    display: hidden;
+    width: 50%;
+    opacity: 50%;
+}
+.inactive-after {
+    opacity: 20%;
 }
 .active {
     z-index: 1;
     width: 200%;
     overflow: visible;
-    transition-duration:  1000ms;
+    transition-duration:  500ms;
 }
-
+.fade-in-image {
+    animation: 150ms ease-in ;
+}
 img {
     border-radius: 8px;
     max-height: max-content;
