@@ -12,15 +12,17 @@ const Slide = (props) => {
     }, [ active, name])
    
 return (
-    <div className={`slide box 
-                    ${active ? 'active' : transit ? 'inactive-after' : 'inactive-before'}
+    <div className={`slide box
+                    ${active ? 'active' : transit ? 'inactive inactive-after' : 'inactive inactive-before'}
                     ${active && !transit ? lastClick ?
-                     'fade-in-image-next' :
-                    'fade-in-image-previous' : ''}
+                     'carousel-from-next' :
+                    'carousel-from-previous' : ''}
                     `} >{`This is your Slide Component`} 
         <div>{name}</div>
         <div>{description}</div>
-        <img className={``} src={photoURL} alt="Project" title="source: imgur.com" />
+        <img className={`${active && !transit ?
+                     'fade-in-image' :
+                    '' }`} src={photoURL} alt="Project" title="source: imgur.com" />
     </div>
 )}
 

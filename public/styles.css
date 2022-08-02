@@ -16,17 +16,15 @@ body {
     flex-direction: row;
 }
 .presented-slides {
-    width: 100vw;
     overflow: hidden;
     display: contents;
 }
-.presented-slides {
-    overflow: hidden;
-}
+
 #app{
     flex-direction: column;
     width: 100vw;
 }
+
 .inactive-before {
     display: hidden;
     opacity: 50%;
@@ -53,34 +51,36 @@ img {
     max-width: max-content;
     height: auto;
     width: 100%;
+            transition: ease-in 500ms;
 }
-.fade-in-image-previous {
-    animation: from-previous 500ms;
-    transition-duration: 250ms;
+.fade-in-image {
+    animation: image-float-in 500ms;
 }
-
-.fade-in-image-next {
-    animation: from-next 500ms ;
-    transition-duration: 250ms;
+.carousel-from-previous {
+    animation: carousel-from-previous 500ms;
 }
 
-@keyframes from-previous {
+.carousel-from-next {
+    animation: carousel-from-next 500ms ;
+    transition:cubic-bezier(1, 0, 0, 1);
+}
+@keyframes carousel-from-previous {
     0% {
-        filter: brightness(50%);
         transform: translateX(-50%);
     }
-    80% {
-        filter: brightness(70%)
-    }
 }
 
-@keyframes from-next {
+@keyframes carousel-from-next {
     0% {
-        filter: brightness(30%);
         transform: translateX(50%);
+    }
+}
+@keyframes image-float-in {
+    0% {
+        filter: brightness(50%);
+
     }
     80% {
         filter: brightness(70%)
     }
-
 }
