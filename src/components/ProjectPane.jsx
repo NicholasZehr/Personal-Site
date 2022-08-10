@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { projectData as projects } from "../ProjectData";
 import { Slide } from "./";
+import Contact from "./Contact";
 export const ProjectPane = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [leftSlide, setLeftSlide] = useState(projects.length - 1);
@@ -37,7 +38,6 @@ export const ProjectPane = () => {
 
   return (
     <div className="box project-pane">
-      {`This is your ProjectPane Component`}
       <button onClick={reverseClick}>Previous</button>
       <div className="presented-slides">
         <Slide project={projects[leftSlide]} />
