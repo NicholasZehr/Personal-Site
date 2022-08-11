@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { projectData as projects } from "../ProjectData";
 import { Slide } from "./";
 import Contact from "./Contact";
-export const ProjectPane = () => {
+export const ProjectPane = ({projects}) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [leftSlide, setLeftSlide] = useState(projects.length - 1);
   const [rightSlide, setRightSlide] = useState(1);

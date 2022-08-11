@@ -10,8 +10,12 @@ body {
     border: solid black 2px;
     flex-direction: column;
     width: 100%;
+    margin: 0;
 }
-
+.contact {
+    position: fixed; 
+    bottom: 0 ;
+}
 .project-pane {
     flex-direction: row;
 }
