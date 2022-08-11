@@ -63,7 +63,13 @@ img {
 .carousel-from-previous {
     animation: carousel-from-previous 500ms;
 }
-
+.project-tab-link {
+ display: none;
+ background-color: grey;
+}
+.project-tab:hover .project-tab-link {
+display: inline-block;
+}
 .carousel-from-next {
     animation: carousel-from-next 500ms ;
     transition:cubic-bezier(1, 0, 0, 1);

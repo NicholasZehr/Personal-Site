@@ -12,6 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="about" element={<AboutMe />} />
+        <Route path="/" element={<Home />} />
         <Route path="projects">
           <Route
             path="personal"
@@ -22,11 +23,10 @@ function App() {
             element={<ProjectPane projects={studentProjects} />}
           />
           <Route
-            path="coworkers"
+            path="coworker"
             element={<ProjectPane projects={coworkerProjects} />}
           />
         </Route>
-        <Route path="home" element={<Home />} />
       </Routes>
       <Contact />
     </div>
