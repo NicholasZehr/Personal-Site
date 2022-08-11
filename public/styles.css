@@ -1,86 +1,105 @@
 * {
-    display: flex;
+  display: flex;
 }
 body {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
-.box{
-    border: solid black 2px;
-    flex-direction: column;
-    width: 100vw;
+.box {
+  border: solid black 2px;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
 }
-
+.contact {
+  position: fixed;
+  bottom: 0;
+}
 .project-pane {
-    flex-direction: row;
+  flex-direction: row;
 }
 .presented-slides {
-    overflow: hidden;
-    display: contents;
+  overflow: hidden;
+  display: contents;
 }
 
-#app{
-    flex-direction: column;
-    width: 100vw;
+#app {
+  flex-direction: column;
+  width: 100vw;
 }
 
 .inactive-before {
-    display: hidden;
-    opacity: 50%;
+  display: hidden;
+  opacity: 50%;
 }
 .inactive-after .inactive-before {
-    width: 50%
+  width: 50%;
 }
 .inactive-after {
-    opacity: 20%;
-    transition: opacity;
-    transition-duration: 250ms;
+  opacity: 20%;
+  transition: opacity;
+  transition-duration: 250ms;
 }
 .active {
-    z-index: 1;
-    width: 200%;
-    overflow: visible;
-    transition: opacity;
-    transition-duration:  500ms;
-    background-color: aqua;
+  z-index: 1;
+  width: 200%;
+  overflow: visible;
+  transition: opacity;
+  transition-duration: 500ms;
+  background-color: aqua;
 }
 img {
-    border-radius: 8px;
-    max-height: max-content;
-    max-width: max-content;
-    height: auto;
-    width: 100%;
-            transition: ease-in 500ms;
+  border-radius: 8px;
+  max-height: max-content;
+  max-width: max-content;
+  height: auto;
+  width: 100%;
+  transition: ease-in 500ms;
 }
 .fade-in-image {
-    animation: image-float-in 500ms;
+  animation: image-float-in 500ms;
 }
 .carousel-from-previous {
-    animation: carousel-from-previous 500ms;
+  animation: carousel-from-previous 500ms;
+}
+.project-tab {
+  position: relative;
+  flex-direction: column;
 }
 
+.project-tab-content {
+  position: absolute;
+  display: none;
+  background-color: grey;
+  z-index: 1;
+}
+.project-tab:hover .project-tab-content {
+  display: inline-block;
+}
+.project-tab::after .project-tab-content {
+    display: none;
+}
 .carousel-from-next {
-    animation: carousel-from-next 500ms ;
-    transition:cubic-bezier(1, 0, 0, 1);
+  animation: carousel-from-next 500ms;
+  transition: cubic-bezier(1, 0, 0, 1);
 }
 @keyframes carousel-from-previous {
-    0% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes carousel-from-next {
-    0% {
-        transform: translateX(50%);
-    }
+  0% {
+    transform: translateX(50%);
+  }
 }
 @keyframes image-float-in {
-    0% {
-        filter: brightness(50%);
-
-    }
-    80% {
-        filter: brightness(70%)
-    }
+  0% {
+    filter: brightness(50%);
+  }
+  80% {
+    filter: brightness(70%);
+  }
 }
