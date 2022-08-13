@@ -6,11 +6,29 @@ body {
   margin: 0;
   padding: 0;
 }
+#app {
+  flex-direction: column;
+  width: 100vw;
+}
 .box {
   border: solid black 2px;
   flex-direction: column;
   width: 100%;
   margin: 0;
+}
+nav > a , .project-tab-button{
+  min-width: 100px;
+  min-height: 70px;
+}
+nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
+  border: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: blueviolet;
+}
+.nav-bar, .project-tab-content{
+  background-color: deepskyblue;
 }
 .contact {
   position: fixed;
@@ -24,11 +42,41 @@ body {
   display: contents;
 }
 
-#app {
-  flex-direction: column;
-  width: 100vw;
+.fade-in-image {
+  animation: image-float-in 500ms;
+}
+.carousel-from-previous {
+  animation: carousel-from-previous 500ms;
+}
+.project-tab {
+  position: relative;
+  display: inline-block;
+}
+.project-tab:hover .project-tab-button {
+  background-color: bisque;
+}
+.project-tab-content {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  min-width: 100%;
+}
+.project-tab:hover .project-tab-content {
+  display: inline-block;
 }
 
+.project-tab-content > a:hover, nav > a:hover {
+  background-color: deeppink;
+}
+
+img {
+  border-radius: 8px;
+  max-height: max-content;
+  max-width: max-content;
+  height: auto;
+  width: 100%;
+  transition: ease-in 500ms;
+}
 .inactive-before {
   display: hidden;
   opacity: 50%;
@@ -48,37 +96,6 @@ body {
   transition: opacity;
   transition-duration: 500ms;
   background-color: aqua;
-}
-img {
-  border-radius: 8px;
-  max-height: max-content;
-  max-width: max-content;
-  height: auto;
-  width: 100%;
-  transition: ease-in 500ms;
-}
-.fade-in-image {
-  animation: image-float-in 500ms;
-}
-.carousel-from-previous {
-  animation: carousel-from-previous 500ms;
-}
-.project-tab {
-  position: relative;
-  flex-direction: column;
-}
-
-.project-tab-content {
-  position: absolute;
-  display: none;
-  background-color: grey;
-  z-index: 1;
-}
-.project-tab:hover .project-tab-content {
-  display: inline-block;
-}
-.project-tab::after .project-tab-content {
-    display: none;
 }
 .carousel-from-next {
   animation: carousel-from-next 500ms;

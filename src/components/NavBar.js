@@ -4,7 +4,7 @@ import ProjectTab from "./ProjectTab";
 
 export const NavBar = (props) => {
   return (
-    <div className="box">
+    <div className="box nav-bar">
       <nav>
         <Link to="about">About</Link>
         <Link to="/">Home</Link>
