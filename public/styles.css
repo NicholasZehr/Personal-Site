@@ -21,14 +21,15 @@ nav > a , .project-tab-button{
   min-height: 70px;
 }
 nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
-  background-color: deepskyblue;
   border: none;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: blueviolet;
 }
-
+.nav-bar, .project-tab-content{
+  background-color: deepskyblue;
+}
 .contact {
   position: fixed;
   bottom: 0;
@@ -51,7 +52,7 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   position: relative;
   display: inline-block;
 }
-.project-tab-button:hover {
+.project-tab:hover .project-tab-button {
   background-color: bisque;
 }
 .project-tab-content {
@@ -63,9 +64,7 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
 .project-tab:hover .project-tab-content {
   display: inline-block;
 }
-.project-tab-button:hover:after  {
-  content: 'V';
-}
+
 .project-tab-content > a:hover, nav > a:hover {
   background-color: deeppink;
 }
