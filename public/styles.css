@@ -26,6 +26,8 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   justify-content: center;
   text-decoration: none;
   color: blueviolet;
+  font-weight: bold;
+  font-size: larger;
 }
 .nav-bar, .project-tab-content{
   background-color: deepskyblue;
@@ -59,7 +61,11 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   position: absolute;
   display: none;
   z-index: 2;
-  min-width: 100%;
+  min-width: 200%;
+
+}
+.project-tab-link {
+  min-height: 70px;
 }
 .project-tab:hover .project-tab-content {
   display: inline-block;
@@ -77,6 +83,7 @@ img {
   width: 100%;
   transition: ease-in 500ms;
 }
+
 .inactive-before {
   display: hidden;
   opacity: 50%;
