@@ -86,12 +86,15 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   transform: translateX(20px) translateY(10px);
   perspective: 4rem;  
   z-index: 5;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .project-tab-content > a:active, nav > a:active {
   transition: all 100ms;
-  transform: translate(10px) translateY(5px);
+  transform: translate(10px) translateY(5px); 
   box-shadow: -10px -5px 10px red;
+  filter: brightness(80%)
 }
 
 img {
