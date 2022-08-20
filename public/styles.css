@@ -58,11 +58,11 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   background-color: bisque;
 }
 .project-tab-content {
+  transition: all 100ms;
   position: absolute;
   display: none;
   z-index: 2;
   min-width: 200%;
-
 }
 .project-tab-link {
   min-height: 70px;
@@ -71,8 +71,27 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   display: inline-block;
 }
 
+.project-tab-content > a, nav > a {
+ transition: all 200ms ease-in;
+}
 .project-tab-content > a:hover, nav > a:hover {
+  border: 4px ;
+  border-style: inset;
+  border-radius: 5px;
+  border-color: deeppink;
   background-color: deeppink;
+  box-shadow: -20px -10px 10px red;
+  transition: all ease-in 200ms;
+  transform-style: preserve-3d; 
+  transform: translateX(20px) translateY(10px);
+  perspective: 4rem;  
+  z-index: 5;
+}
+
+.project-tab-content > a:active, nav > a:active {
+  transition: all 100ms;
+  transform: translate(10px) translateY(5px);
+  box-shadow: -10px -5px 10px red;
 }
 
 img {
@@ -126,4 +145,9 @@ img {
   80% {
     filter: brightness(70%);
   }
+}
+@keyframes button-hover {
+
+
+
 }
