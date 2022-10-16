@@ -6,8 +6,12 @@ export const NavBar = (props) => {
   return (
     <div className="box nav-bar">
       <nav>
-        <Link to="about">About</Link>
-        <Link to="/">Home</Link>
+        <div className="link-stabilizer">
+          <Link to="about">About</Link>
+        </div>
+        <div className="link-stabilizer">
+          <Link to="/">Home</Link>
+        </div>
         <ProjectTab>Projects</ProjectTab>
       </nav>
     </div>

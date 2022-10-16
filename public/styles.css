@@ -16,11 +16,15 @@ body {
   width: 100%;
   margin: 0;
 }
-nav > a , .project-tab-button{
+nav > .link-stabilizer > a,
+.project-tab-button {
   min-width: 100px;
   min-height: 70px;
 }
-nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
+nav > .link-stabilizer > a,
+.project-tab-button,
+.project-tab-content > .link-stabilizer > a,
+.project-tab-content, .project-tab-content > .link-stabilizer {
   border: none;
   align-items: center;
   justify-content: center;
@@ -29,7 +33,8 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   font-weight: bold;
   font-size: larger;
 }
-.nav-bar, .project-tab-content{
+.nav-bar,
+.project-tab-content {
   background-color: deepskyblue;
 }
 .contact {
@@ -44,12 +49,6 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   display: contents;
 }
 
-.fade-in-image {
-  animation: image-float-in 500ms;
-}
-.carousel-from-previous {
-  animation: carousel-from-previous 500ms;
-}
 .project-tab {
   position: relative;
   display: inline-block;
@@ -64,33 +63,62 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   z-index: 2;
   min-width: 200%;
 }
-.project-tab-link {
+.project-tab-content >
+.project-tab-link, .project-tab-content > .link-stabilizer {
   min-height: 70px;
 }
-.project-tab:hover .project-tab-content {
+.project-tab:hover  .project-tab-content  {
   display: inline-block;
 }
 
-.project-tab-content > a:hover, nav > a:hover {
-  border: 4px ;
+.project-tab-content > .link-stabilizer > a,
+nav > .link-stabilizer > a {
+  transition: all 200ms ease-in;
+}
+.link-stabilizer:hover > a {
+  border: 4px;
   border-style: inset;
   border-radius: 5px;
   border-color: deeppink;
   background-color: deeppink;
   box-shadow: -20px -10px 10px red;
   transition: all ease-in 200ms;
-  transform-style: preserve-3d; 
+  transform-style: preserve-3d;
   transform: translateX(20px) translateY(10px);
-  perspective: 4rem;  
+  perspective: 4rem;
   z-index: 5;
   max-height: initial;
 }
 
-.project-tab-content > a:active, nav > a:active {
+.project-tab-content > .link-stabilizer > a:hover,
+nav > .link-stabilizer > a:hover {
+  border: 4px;
+  border-style: inset;
+  border-radius: 5px;
+  border-color: deeppink;
+  background-color: deeppink;
+  box-shadow: -20px -10px 10px red;
+  transition: all ease-in 200ms;
+  transform-style: preserve-3d;
+  transform: translateX(20px) translateY(10px);
+  perspective: 4rem;
+  z-index: 5;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.project-tab-content > .link-stabilizer > a:active,
+nav > .link-stabilizer > a:active {
   transition: all 100ms;
-  transform: translate(10px) translateY(5px); 
+  transform: translate(10px) translateY(5px);
   box-shadow: -10px -5px 10px red;
-  filter: brightness(80%)
+  filter: brightness(80%);
+}
+.fade-in-image {
+  animation: image-float-in 500ms;
+}
+.carousel-from-previous {
+  animation: carousel-from-previous 500ms;
 }
 
 img {
@@ -146,7 +174,4 @@ img {
   }
 }
 @keyframes button-hover {
-
-
-
 }
