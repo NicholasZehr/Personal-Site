@@ -3,6 +3,7 @@ import { Slide } from "./";
 export const ProjectPane = ({ projects }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [leftSlide, setLeftSlide] = useState(projects.length - 1);
+  // Need to determine best path forward with regards to asyncronous useState
   const [rightSlide, setRightSlide] = useState(1);
   const [lastClick, setLastClick] = useState(false);
   const slideManager = (next, slide, setter) => {
@@ -35,8 +36,9 @@ export const ProjectPane = ({ projects }) => {
 
   return (
     <>
-    {projects.length ? (
-      <div className="box project-pane">
+      {projects.length ? (
+        <div className="box project-pane">
+          {console.log(projects)}
           <button onClick={reverseClick}>Previous</button>
           <div className="presented-slides">
             <Slide project={projects[leftSlide]} />
