@@ -57,7 +57,7 @@ nav > .link-stabilizer > a,
   background-color: bisque;
 }
 .project-tab-content {
-  transition: all 100ms;
+  transition: all 200ms;
   position: absolute;
   display: none;
   z-index: 2;
@@ -87,8 +87,7 @@ nav > .link-stabilizer > a {
   transform: translateX(20px) translateY(10px);
   perspective: 4rem;
   z-index: 5;
-  padding-top: 10px;
-  padding-left: 20px;
+  max-height: initial;
 }
 
 .project-tab-content > .link-stabilizer > a:hover,
