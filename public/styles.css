@@ -58,7 +58,7 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   background-color: bisque;
 }
 .project-tab-content {
-  transition: all 100ms;
+  transition: all 200ms;
   position: absolute;
   display: none;
   z-index: 2;
@@ -71,9 +71,6 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   display: inline-block;
 }
 
-.project-tab-content > a, nav > a {
- transition: all 200ms ease-in;
-}
 .project-tab-content > a:hover, nav > a:hover {
   border: 4px ;
   border-style: inset;
@@ -86,12 +83,14 @@ nav > a , .project-tab-button, .project-tab-content > a, .project-tab-content{
   transform: translateX(20px) translateY(10px);
   perspective: 4rem;  
   z-index: 5;
+  max-height: initial;
 }
 
 .project-tab-content > a:active, nav > a:active {
   transition: all 100ms;
-  transform: translate(10px) translateY(5px);
+  transform: translate(10px) translateY(5px); 
   box-shadow: -10px -5px 10px red;
+  filter: brightness(80%)
 }
 
 img {
